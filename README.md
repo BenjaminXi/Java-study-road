@@ -5,6 +5,7 @@
 * [1.1Cookie](#cookie)
 * [1.2HTTP请求](#HTTP请求)
 * [2.JavaScript](#JavaScript)
+
 ## <a id="HTTP">HTTP</a>
 ####<a id="cookie">cookie是什么？cookie的作用？</a>
 * Cookie：当前识别用户，实现持久会话的最好方式。Cookie可以笼统地分为两类：会话cookie和持久cookie。前者为临时cookie，记录了用户访问站点时的设置和偏好，用户退出浏览器时，会话cookie就删除了。持久cookie的生存时间更长一些，存储在硬盘上，浏览器退出，计算机重启时仍然存在。通常会用持久cookie维护某个用户周期性访问的站点的站点的配置文件或登录名。这两者的唯一区别是它们的过期时间。
