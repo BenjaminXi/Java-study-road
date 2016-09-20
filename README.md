@@ -107,3 +107,26 @@ var Obj = function(msg){
 Obj("shouting").waitAndShout();
 ```
 ps：在[jsbin](http://jsbin.com)中只能显示一次，无法循环，待定。
+#### 完成后续代码，计算两个数组的交集，并指出该算法的时间复杂度和空间复杂度。
+```
+var arr1=[1,2,3,3,4,2,3,5];
+var arr2=[3,4,4,3,5,7,8];
+var arr3=[];
+//计算arr1和arr2两个数组的交集，将结果保存到arr3中
+console.log(arr3);
+```
+解：
+```
+var arr1=[1,2,3,3,4,2,3,5];
+var arr2=[3,4,4,3,5,7,8];
+var arr3=[];
+var len1=arr1.length,len2=arr2.length;
+for(var i=0;i<len1;i++){
+	for(var j=0;j<len2;j++){
+		if(arr1[i]==arr2[j] && arr3.indexOf(arr1[i])==-1){
+		arr3.push(arr1[i]);}
+	}
+}
+//计算arr1和arr2两个数组的交集，将结果保存到arr3中
+console.log(arr3);
+```
