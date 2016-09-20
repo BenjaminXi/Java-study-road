@@ -106,4 +106,4 @@ var Obj = function(msg){
 }
 Obj("shouting").waitAndShout();
 ```
-ps：在http://jsbin.com中只能显示一次，无法循环，待定。
+ps：在[jsbin](http://jsbin.com)中只能显示一次，无法循环，待定。
