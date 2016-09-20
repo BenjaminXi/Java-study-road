@@ -130,3 +130,4 @@ for(var i=0;i<len1;i++){
 //计算arr1和arr2两个数组的交集，将结果保存到arr3中
 console.log(arr3);
 ```
+时间复杂度为O(len1*len2)
