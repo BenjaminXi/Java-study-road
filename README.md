@@ -1,11 +1,16 @@
 # front-end-written-examination
 ##校招笔试总结
-## <a name='HTTP'>HTTP</a>
-####cookie是什么？cookie的作用？
+##目录
+* [1.HTTP](#HTTP)
+* [1.1Cookie](#cookie)
+* [1.2HTTP请求](#HTTP请求)
+* [2.JavaScript](#JavaScript)
+## <a id="HTTP">HTTP</a>
+####<a id="cookie">cookie是什么？cookie的作用？</a>
 * Cookie：当前识别用户，实现持久会话的最好方式。Cookie可以笼统地分为两类：会话cookie和持久cookie。前者为临时cookie，记录了用户访问站点时的设置和偏好，用户退出浏览器时，会话cookie就删除了。持久cookie的生存时间更长一些，存储在硬盘上，浏览器退出，计算机重启时仍然存在。通常会用持久cookie维护某个用户周期性访问的站点的站点的配置文件或登录名。这两者的唯一区别是它们的过期时间。
 * Cookie的作用：当用户首次访问web服务器时，web服务器对用户一无所知。Web服务器会希望用户再次访问，所以给用户拍上一个独有的cookie，这样以后就可以识别出用户了。Cookie中包含了由name=value这样的信息列表，通过set-cookie HTTP响应首部将其贴到用户身上。Cookie通常包含一个服务器为了进行跟踪而产生的识别码。浏览器会记住从服务器返回的set-cookie首部中cookie内容，并将cookie集存储在浏览器的cookie数据库中，将来用户返回同一站点时，浏览器会挑中那个服务器贴到用户身上的那些cookie，并在一个cookie请求首部中将其传回去。
 
-###HTTP请求的全过程。
+####<a id ="HTTP请求">HTTP请求的全过程。</a>
 1. 浏览器从URL中解析出服务器的主机名；
 2. 浏览器从将主机名转换为IP地址；
 3. 浏览器将端口号从URL中解析出来；
@@ -14,7 +19,7 @@
 6. 服务器向浏览器回送一条HTTP响应报文；
 7. 关闭连接，浏览器显示文档。
 
-###HTTP请求头信息。
+####HTTP请求头信息。
 HTTP报文包含三部分：起始行，头部和主体。HTTP报文分为两类：请求报文和响应报文。起始行包含方法、状态码、原因短语和版本号。首部向请求和响应报文添加了一些附加信息，本质上，是一些名/值对的列表。首部可以分为以下几类：通用首部、请求首部、响应首部、实体首部和扩展首部。
 
 请求首部用于说明谁在发送请求、请求来自何处、或者客户端的喜好及能力，浏览器根据请求首部，为客户端提供更好的响应。
@@ -24,7 +29,7 @@ HTTP报文包含三部分：起始行，头部和主体。HTTP报文分为两类
 * 安全请求首部对请求进行质询/响应认证，包括：Authorization、Cookie、Cookie2。
 * 代理请求首部包括：Max-Forward、Proxy-Authorization、Proxy-Connection。
 
-## <a name='Javascript'>Javascript</a>
+## <a id='Javascript'>Javascript</a>
 ####Json数据如下：person = [{name:"甲",dateOfBirth:"1991-01-01",sex:"male"},{name:"乙",dateOfBirth:"1992-01-01",sex:"female"},{name:"丙",dateOfBirth:"1989-08-21",sex:"female"},{name:"丁",dateOfBirth:"1991-06-22",sex:"female"}];，筛选出sex为female的数据。
 ```
 var person = [{name:"甲",dateOfBirth:"1991-01-01",sex:"male"},{name:"乙",dateOfBirth:"1992-01-01",sex:"female"},{name:"丙",dateOfBirth:"1989-08-21",sex:"female"},{name:"丁",dateOfBirth:"1991-06-22",sex:"female"}];
@@ -54,3 +59,50 @@ for(var i=12589;i<=25899;i++){
 }
 console.log("总数为"+count);
 ```
+####请把以下用于连接字符串的JavaScript代码修改为更高效的方式
+```
+var htmlString = ‘ < div class=”container” > ’ + ‘ < ul id=”news-list” > ’;
+for (var i = 0; i < NEWS.length; i++) {
+htmlString += ‘ < li > < a href=”’ +NEWS[i].LINK + ‘” > +NEWS[i].TITLE + ‘ < /a > < /li > ’;
+}
+htmlString += ‘ < /ul > < /div > ’;
+```
+分析：考点1-JavaScript的字符串连接机制；考点2-NEWS.length需要缓存，不然每次循环都要重新计算一次length。
+```
+var htmlString=[];
+htmlString.push(‘ < div class=”container” > ’ + ‘ < ul id=”news-list” > ’);
+for(var i = 0, len = NEWS.length; i < len; i++){
+var news = NEWS[i];
+htmlString.push('<li><a href="'+ news.LINK+'">'+ news.TITLE+'</a></li>');
+}
+htmlString=htmlString.join(""); 
+```
+####尝试实现注释部分的Javascript代码，可在其他任何地方添加更多代码（如不能实现，说明一下不能实现的原因）：
+```
+var Obj = function(msg){
+    this.msg = msg;
+    this.shout = function(){
+        alert(this.msg);
+    }  
+    this.waitAndShout = function(){
+        //隔五秒钟后执行上面的shout方法
+    }
+}
+```
+解：
+```
+var Obj = function(msg){
+    this.msg = msg;
+    this.shout = function(){
+        alert(this.msg);
+    };    
+    this.waitAndShout = function(){
+        var that = this;
+        setTimeout(function(){that.shout();},5000);
+        //隔五秒钟后执行上面的shout方法
+    }
+    return this;
+}
+Obj("shouting").waitAndShout();
+```
+ps：在http://jsbin.com中只能显示一次，无法循环，待定。
