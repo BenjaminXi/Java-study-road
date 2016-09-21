@@ -131,3 +131,25 @@ for(var i=0;i<len1;i++){
 console.log(arr3);
 ```
 时间复杂度为O(len1*len2)
+####求下列程序输出
+```
+var a = function(){
+  this.b=1
+}
+a();
+console.log(b);
+a.b=2;
+a.prototype.b=3;
+var c = new a();
+console.log(c.b);
+```
+输出为:1 1 
+####求下列程序输出
+```
+a=1,b=2,c=2;
+while(a<b<c){
+  t=a;a=b;b=t;c--;
+}
+console.log(a,b,c);
+```
+分析：1<2<2,先计算1<2为true，返回1,再计算1<2,a与b值对调，a=2，b=1，c=1。再循环，条件再次满足，a=1，b=2，c=0。输出：1 2 0。
