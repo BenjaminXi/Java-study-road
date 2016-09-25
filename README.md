@@ -5,6 +5,7 @@
 	* [1.1Cookie](#cookie)
 	* [1.2HTTP请求](#HTTP请求)
 * [2.JavaScript](#JavaScript)
+* [3.CSS](#CSS)
 
 ## <a id="HTTP">HTTP</a>
 ####<a id="cookie">Cookie是什么？Cookie的作用？</a>
@@ -153,3 +154,20 @@ while(a<b<c){
 console.log(a,b,c);
 ```
 分析：1<2<2,先计算1<2为true，返回1,再计算1<2,a与b值对调，a=2，b=1，c=1。再循环，条件再次满足，a=1，b=2，c=0。输出：1 2 0。
+
+## <a id="CSS">CSS</a>
+####CSS选择符有哪些？
+1. 元素选择器，如html,p,h2
+2. 逗号选择器，包含多个不同的选择器
+3. 通配选择器（*）
+4. 类选择器（.classname），多类选择器（.classname1.classname2）
+5. ID选择器（#），一个ID只能在文档中出现一次
+6. 属性选择器
+	* 单个属性选择，如a[href]
+	* 多个属性选择如a[href][title]，选择多个属性的a元素
+	* 属性值选择，如planet[moos="1"]
+	* 部分属性值选择，
+		* 元素选择，如p[class~="warning"]，选择class属性中包含warning的元素
+		* 子串匹配属性选择，如[foo^="bar"],foo属性以bar开头的元素；[foo$="bar"],foo属性以bar结尾的元素；[foo*="bar"]，foo属性包含bar子串的元素
+		* 特定属性选择，如[lang|="en"]，lang属性以en-开头的所有元素
+7. 后代选择器，用空格来表示，解释为“...作为...的一部分”，但必须从右向左，如h1 em解释为em作为h1的一部分
