@@ -176,12 +176,12 @@ console.log(a,b,c);
 10. 伪类选择器，（冒号）
 	* 链接伪类，如 a:link和a:visited
 	* 动态伪类，可以应用到任何元素，有3个动态伪类，":focus",":hover",":active"
-	* 结合使用伪类，如a:link:hover
+	* 结合使用伪类，如 a:link:hover
 11. 伪元素选择器，（冒号）
 	* 设置首字母样式，p:first-letter
-	* 设置第一行样式，p：first-line
-	* 设置之前，h1：before
-	* 设置之后，h2：after
+	* 设置第一行样式，p:first-line
+	* 设置之前，h1:before
+	* 设置之后，h2:after
 
 ####选择器的优先级如何计算？
 同一个元素可以使用两个或多个规则来选择，每个规则都有自己的选择器，只有规则的特殊性更高才能胜出，选择器的具体特殊性如下：
