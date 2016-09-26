@@ -6,8 +6,8 @@
 	* [1.2HTTP请求](#HTTP请求)
 * [2.JavaScript](#JavaScript)
 * [3.CSS](#CSS)
-	*[3.1选择器](#选择器)
-	*[3.2优先级](#优先级)
+	* [3.1选择器](#选择器)
+	* [3.2优先级](#优先级)
 
 ## <a id="HTTP">HTTP</a>
 ####<a id="cookie">Cookie是什么？Cookie的作用？</a>
