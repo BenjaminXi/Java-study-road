@@ -225,7 +225,8 @@ console.log(a,b,c);
 3. 按顺序排序，声明在样式表或文档中越后出现，权重越大。
 
 ####display:none和visiblity：hidden有什么区别
-display:none作用：HTML元素的宽度、高度等各种属性值都将“丢失”；visibility:hidden属性后，HTML元素仅仅是在视觉上看不见，而它所占据的空间位置仍然存在。
+display:none作用：HTML元素的宽度、高度等各种属性值都将“丢失”；</br>
+visibility:hidden作用：HTML元素仅仅是在视觉上看不见，而它所占据的空间位置仍然存在。
 
 ####用CSS实现，点击div实现180度旋转
 
