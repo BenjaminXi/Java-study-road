@@ -35,23 +35,25 @@ HTTP报文包含三部分：起始行，头部和主体。HTTP报文分为两类
 
 
 ####get,post,delete,put,option的区别和作用
-get：用于请求服务器返回某个资源
-post：向服务器输入数据
-put：向服务器写入文档
-options：请求服务器告知其支持的各种功能
-delete：请求服务器删除指定URL的资源
+get：用于请求服务器返回某个资源</br>
+post：向服务器输入数据</br>
+put：向服务器写入文档</br>
+options：请求服务器告知其支持的各种功能</br>
+delete：请求服务器删除指定URL的资源</br>
 
 get和post区别：
-请求参数：get的请求参数在URL之后，长度有限；post请求参数位置在消息体中，适合安全传输，可以上传大量数据；
-缓存：get可避免缓存，浏览器从缓存中读取；
-标签：get方便用户设定标签，post请求参数不在地址栏，无法加入书签；
-等幂：get为等幂操作（同一操作重复多次，返回同样的结果），post为非等幂操作；
+
+* 请求参数：get的请求参数在URL之后，长度有限；post请求参数位置在消息体中，适合安全传输，可以上传大量数据；
+* 缓存：get可避免缓存，浏览器从缓存中读取；
+* 标签：get方便用户设定标签，post请求参数不在地址栏，无法加入书签；
+* 等幂：get为等幂操作（同一操作重复多次，返回同样的结果），post为非等幂操作；
 
 ####cookie,sessionStorage,localStorage的区别
-生命周期：cookie由服务器设置失效时间，过期之后cookie和cookie数据被删除；sessionStorage关闭页面后被清除；localStorage会永久储存，除非被删除；
-存放数据大小：cookie一般为4K左右；sessionStorage和localStorage一般为5MB；
-作用域：cookie在所有同源窗口中都是共享的；sessionStorage在不同的浏览器窗口中不共享，即使是同一个页面；localStorage 在所有同源窗口中都是共享的；
-位置：cookie数据始终在同源的http请求中携带（即使不需要），即cookie在浏览器和服务器间来回传递。而sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存。
+
+* 生命周期：cookie由服务器设置失效时间，过期之后cookie和cookie数据被删除；sessionStorage关闭页面后被清除；localStorage会永久储存，除非被删除；
+* 存放数据大小：cookie一般为4K左右；sessionStorage和localStorage一般为5MB；
+* 作用域：cookie在所有同源窗口中都是共享的；sessionStorage在不同的浏览器窗口中不共享，即使是同一个页面；localStorage 在所有同源窗口中都是共享的；
+* 位置：cookie数据始终在同源的http请求中携带（即使不需要），即cookie在浏览器和服务器间来回传递。而sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存。
 
 ## <a id='JavaScript'>JavaScript</a>
 ####Json数据如下：person = [{name:"甲",dateOfBirth:"1991-01-01",sex:"male"},{name:"乙",dateOfBirth:"1992-01-01",sex:"female"},{name:"丙",dateOfBirth:"1989-08-21",sex:"female"},{name:"丁",dateOfBirth:"1991-06-22",sex:"female"}];，筛选出sex为female的数据。
