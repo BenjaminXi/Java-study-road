@@ -1,4 +1,4 @@
-# front-end-written-examination
+# written-examination
 ##校招笔试总结
 ##目录
 * [1.HTTP](#HTTP)
