@@ -115,8 +115,19 @@ WHERE teacher.tname = '李四' AND teacher.tid=course.tid AND course.cid=sc.cid)
 ```
 ##6查询学过“01”课程并且也学过编号“02”课程的同学的学号、姓名；
 ```
-
+SELECT a.SID,a.SNAME 
+FROM 
+(SELECT student.SNAME,student.SID FROM student,course,sc WHERE sc.cid='01'AND sc.sid=student.sid AND sc.cid=course.cid) a,
+(SELECT student.SNAME,student.SID FROM student,course,sc WHERE sc.cid='02'AND sc.sid=student.sid AND sc.cid=course.cid) b 
+WHERE a.sid=b.sid;
 ```
+##7.查询学过“李四”老师所教的所有课的同学的学号、姓名；
+```
+SELECT sc.sid,student.sname
+FROM sc,course,teacher,student
+WHERE teacher.tname = '李四' AND teacher.tid=course.tid AND course.cid=sc.cid AND student.sid=sc.sid;
+```
+##8查询课程编号“02”的成绩比课程编号“01”课程低的所有同学的学号、姓名；
 
 
 
