@@ -76,12 +76,12 @@ FROM (SELECT sid,score FROM sc WHERE cid='01') a,(SELECT sid,score FROM sc WHERE
 WHERE a.score>b.score AND a.sid=b.sid;
 ```
 ##2查询平均成绩大于60分的同学的学号和平均成绩；
+考点：group by 分组数据，having 过滤数据，avg聚集函数
 ```
 SELECT sid,AVG(score)
 FROM sc
 GROUP BY sid HAVING AVG(score)>60;
 ```
-考点：group by 分组数据，having 过滤数据，avg聚集函数
 ##3查询所有同学的学号、姓名、选课数、总成绩
 ```
 SELECT b.sid,b.sname,COUNT(a.sid) AS number,SUM(a.score) AS total
@@ -102,6 +102,22 @@ SELECT COUNT(teacher.tid)
 FROM teacher 
 WHERE teacher.tname LIKE '李%';
 ```
+##5查询没学过“李四”老师课的同学的学号、姓名;
+###考点
+in操作符，not操作符，子查询
+```
+SELECT student.sid,student.sname 
+FROM student
+WHERE sid NOT IN(
+SELECT sc.sid
+FROM sc,course,teacher
+WHERE teacher.tname = '李四' AND teacher.tid=course.tid AND course.cid=sc.cid);
+```
+##6查询学过“01”课程并且也学过编号“02”课程的同学的学号、姓名；
+```
+
+```
+
 
 
 
