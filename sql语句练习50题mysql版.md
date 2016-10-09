@@ -141,7 +141,7 @@ WHERE sid NOT IN(
 	SELECT sc.sid
 	FROM sc,student
 	WHERE sc.sid=student.sid AND score>60);
-    ```
+```
 ##10查询没有学全所有课的同学的学号、姓名；
 ```
 SELECT Student.sid,Student.Sname  
@@ -169,7 +169,7 @@ SET sc.score = (
 	SELECT AVG(sc.score)
 	FROM teacher,course,sc
 	WHERE tname='李四' AND teacher.tid=course.tid AND course.cid=sc.cid);
-   ```
+```
 ##14查询和“02”号的同学学习的课程完全相同的其他同学学号和姓名；
 ```
 SELECT sid 
@@ -183,7 +183,7 @@ HAVING COUNT(*) = (
 	SELECT COUNT(*) 
 	FROM SC 
 	WHERE Sid='02');
-    ```
+```
 ##15删除学习“李四”老师课的 SC 表记录；
 ```
 DELETE FROM sc
@@ -264,7 +264,7 @@ AS T2 ORDER BY 平均成绩 DESC;
  FROM student s,sc
  WHERE s.sid=sc.sid AND cid ='01'
  ORDER BY score DESC LIMIT 3
- ```
+```
  只有01课程的前三名，显示所有科目的前三名待解决。
 ##26.查询每门课程被选修的学生数
 ```
