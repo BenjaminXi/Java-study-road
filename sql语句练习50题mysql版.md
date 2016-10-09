@@ -281,16 +281,60 @@ GROUP BY student.sid
 HAVING COUNT(*)=1
 ```
 ##28.查询男生、女生人数
-
+```
+SELECT ssex,COUNT(*)
+FROM student
+GROUP BY ssex
+```
 ##29、查询姓“张”的学生名单
+```
+SELECT COUNT(*)
+FROM student
+WHERE sname LIKE '张%';
+```
 ##30、查询同名同性学生名单，并统计同名人数
-##31、1981 年出生的学生名单(注：Student 表中 Sage 列的类型是 datetime)
+```
+SELECT sname,COUNT(*)
+FROM student
+GROUP BY sname
+HAVING COUNT(sname)>1;
+```
+##31、1991 年出生的学生名单(注：Student 表中 Sage 列的类型是 datetime)
+```
+SELECT sname,sage
+FROM student
+WHERE YEAR(sage)=1991;
+```
 ##32.查询每门课程的平均成绩，结果按平均成绩升序排列，平均成绩相同时，按课程号降序排列
-SELECT Cid,Avg(score) FROM SC GROUP BY cid ORDER BY Avg(score),cid DESC ;
+```
+SELECT cid,AVG(score)
+FROM sc
+GROUP BY cid
+ORDER BY AVG(score),cid DESC;
+```
 ##33.查询平均成绩大于 85 的所有学生的学号、姓名和平均成绩
-##34.查询课程名称为“数据库”，且分数低于 60 的学生姓名和分数
+```
+SELECT sc.sid,sname,AVG(score)
+FROM sc,student
+WHERE sc.sid=student.sid
+GROUP BY sc.sid
+HAVING AVG(score)>85;
+```
+##34.查询课程名称为“语文”，且分数低于 60 的学生姓名和分数
+```
+SELECT sc.sid,student.sname,sc.score
+FROM sc,course,student
+WHERE course.cname='语文' AND course.cid=sc.cid AND sc.sid=student.sid AND sc.score<60;
+```
 ##35.查询所有学生的选课情况；
-##36.查询任何一门课程成绩在 70 分以上的姓名、课程名称和分数；
+```
+SELECT SC.Sid,SC.Cid,Sname,Cname 
+FROM SC,Student,Course 
+WHERE SC.Sid=Student.Sid AND SC.Cid=Course.Cid ORDER BY sc.sid; 
+```
+##36.查询任何一门课程成绩在70分以上的姓名、课程名称和分数；
+```
+```
 ##37.查询不及格的课程，并按课程号从大到小排列 
 SELECT cid,sid FROM sc WHERE score < 60 ORDER BY cid 
 ##38.查询课程编号为且课程成绩在分以上的学生的学号和姓名；
