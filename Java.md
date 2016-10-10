@@ -12,13 +12,14 @@ protected  |  Y |  Y |  Y |  N
 无修饰符  |  Y |  Y |  N or Y(见说明） |  N
 private  |  Y |  N |  N |  N
 
-
-
 ####链表反转
 
 ####什么是工厂模式
 
 ####list和set有什么区别，各举两种
+* list是有序的，可重复的
+* set是无序的，不可重复的
+list有三种接口：Arraylist，linkedlist，vector；set有两种接口：Hashset和linkedHashset.
 
 ####用递归实现深度优先算法
 
