@@ -19,6 +19,12 @@ A快速排序 B基数排序 C堆排序 D归并排序 E冒泡排序
 
 ####用递归实现深度优先算法
 
+####进程与线程的联系与区别
+
+####cookie与session的区别
+
+####散列表
+
 ###Java
 
 ####public，private，protected和默认有什么区别？
@@ -59,9 +65,6 @@ list有三种接口：Arraylist，linkedlist，vector；set有两种接口：Has
 ###编程题
 ####一串字母数字符号混合的字符串，输出小写字母
 ####输入逗号分割的数字，输出被除数。如输入2,4,6,8,10,3,9;输出4,6,8,10,9.
-####输入“I am a student.”实现输出"student. a am I"。
-
-
-
-
+####输入“I am a student.” 实现输出"student. a am I".
+####对称的字符串的最大长度
 
