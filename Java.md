@@ -79,6 +79,9 @@ list有三种接口：Arraylist，linkedlist，vector；set有两种接口：Has
 ####jsp九大内置对象
 * request,response,pageContext,session,application,out,config,page,exception.
 
+####Java中&&和&的区别 
+* &&和&都表示与，区别是&&如果不满足第一个表达式，后面就不会再判断；而&需要判断两个条件。
+
 ##数据库
 ####什么是事务
 * 事务是数据库中一个单独的执行单元，当在数据库中更改数据成功时，在事务中的数据便会提交，不再改变。否则，事务取消或者回滚，更改无效。
