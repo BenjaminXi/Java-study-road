@@ -10,7 +10,7 @@
 	* 单个属性选择，如a[href]
 	* 多个属性选择如a[href][title]，选择多个属性的a元素
 	* 属性值选择，如planet[moos="1"]
-	* 部分属性值选择，
+	* 部分属性值选择
 		* 元素选择，如p[class~="warning"]，选择class属性中包含warning的元素
 		* 子串匹配属性选择，如[foo^="bar"],foo属性以bar开头的元素；[foo$="bar"],foo属性以bar结尾的元素；[foo*="bar"]，foo属性包含bar子串的元素
 		* 特定属性选择，如[lang|="en"]，lang属性以en-开头的所有元素
