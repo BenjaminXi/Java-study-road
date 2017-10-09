@@ -23,4 +23,14 @@
 	* [选择器的优先级如何计算](https://github.com/BenjaminXi/Java-study-road/blob/master/CSS.md#优先级)
 	* [display:none和visiblity：hidden有什么区别](https://github.com/BenjaminXi/Java-study-road/blob/master/CSS.md#display&visiblity)
 
-
+* [数据结构](https://github.com/BenjaminXi/Java-study-road/blob/master/data-structure.md)
+	* [数组和链表什么区别](https://github.com/BenjaminXi/Java-study-road/blob/master/data-structure.md#数组和链表什么区别)
+	* [堆和栈有什么区别和联系](https://github.com/BenjaminXi/Java-study-road/blob/master/data-structure.md#堆和栈有什么区别和联系)
+	* [根据前序遍历和后序遍历求中序遍历](https://github.com/BenjaminXi/Java-study-road/blob/master/data-structure.md#根据前序遍历和后序遍历求中序遍历)
+	* [构建二叉搜索树](https://github.com/BenjaminXi/Java-study-road/blob/master/data-structure.md#构建二叉搜索树)
+	
+* [数据库](https://github.com/BenjaminXi/Java-study-road/blob/master/database.md)
+	* [什么是事务](https://github.com/BenjaminXi/Java-study-road/blob/master/database.md#事务)
+	* [数据库的原子性](https://github.com/BenjaminXi/Java-study-road/blob/master/database.md#原子性)
+	* [如何实现数据库的分页查询](https://github.com/BenjaminXi/Java-study-road/blob/master/database.md#分页查询)
+	* [各种范式有什么区别](https://github.com/BenjaminXi/Java-study-road/blob/master/database.md#范式)
