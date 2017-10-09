@@ -1,5 +1,5 @@
 # <a id="CSS">CSS</a>
-### <a id="选择器">CSS选择符有哪些？</a>
+### <a id="选择器">CSS选择器有哪些？</a>
 1. 元素选择器，如html,p,h2
 2. 逗号选择器，包含多个不同的选择器
 3. 通配选择器（*）
@@ -39,7 +39,7 @@
 2. 按特殊性排序，较高特殊性的权重大于较低特殊性的的元素
 3. 按顺序排序，声明在样式表或文档中越后出现，权重越大。
 
-### display:none和visiblity：hidden有什么区别
+### <a id="display&visiblity">display:none和visiblity：hidden有什么区别</a>
 display:none作用：HTML元素的宽度、高度等各种属性值都将“丢失”；</br>
 visibility:hidden作用：HTML元素仅仅是在视觉上看不见，而它所占据的空间位置仍然存在。
 
