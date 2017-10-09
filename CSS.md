@@ -1,9 +1,10 @@
 # <a id="CSS">CSS</a>
+
 ### <a id="选择器">CSS选择器有哪些？</a>
 1. 元素选择器，如html,p,h2
 2. 逗号选择器，包含多个不同的选择器
-3. 通配选择器（*）
-4. 类选择器（.classname），多类选择器（.classname1.classname2）
+3. 通配选择器（*)
+4. 类选择器 （.classname），多类选择器（.classname1.classname2）
 5. ID选择器（#），一个ID只能在文档中出现一次
 6. 属性选择器
 	* 单个属性选择，如a[href]
