@@ -14,3 +14,56 @@
 * 信号：用于通知接收进程某个事件已经发生。
 * 共享内存：是最快的进程间通信方式，往往与信号量配合使用，来实现进程间的同步和通信。
 * 套接字：可用于不同机器间的进程通信。
+
+### 单线程环境
+```
+public sealed class Singleton{
+ private Singleton(){} //私有构造函数
+ private static Singleton instance = null; //一个静态的变量用来保存单实例的引用
+ public static Singleton Instance{
+  get{
+   if(instance == null)
+    instance = new Singleton();
+    return instance;
+  }
+ }
+}
+```
+缺点：如果有两个线程判断instance为null,那么都会创建一个实例，就不满足单例模式了。为此需要添加一个同步锁，在if语句之前添加锁，这样一个时刻只能有一个线程得到同步锁。
+### 多线程环境
+```
+public sealed class Singleton{
+ private Singleton(){} //私有构造函数
+ private static Singleton instance = null; //一个静态的变量用来保存单实例的引用
+ private static readonly object syncObj = new object(); //定义一个同步锁
+ public static Singleton Instance{
+  get{
+   lock(syncObj){
+    if(instance == null)
+     instance = new Singleton();
+     return instance;
+     }
+  }
+ }
+}
+```
+缺点：但是加锁是一个非常耗时的操作，加锁的目的是为了创建实例，如果实例存在，就不要饭后；如果实例不存在，再加锁。
+### 多线程改进
+```
+public sealed class Singleton{
+ private Singleton(){} //私有构造函数
+ private static Singleton instance = null; //一个静态的变量用来保存单实例的引用
+ private static readonly object syncObj = new object(); //定义一个同步锁
+ public static Singleton Instance{
+  get{
+   if(instance==null){
+    lock(syncObj){
+     if(instance == null)
+      instance = new Singleton();
+      }
+     }
+     return instance;
+  }
+ }
+}
+```
