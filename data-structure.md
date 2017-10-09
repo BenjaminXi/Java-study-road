@@ -20,3 +20,26 @@
 A快速排序 B基数排序 C堆排序 D归并排序 E冒泡排序
 
 ### 用递归实现深度优先算法
+
+### 编程题
+#### 一串字母数字符号混合的字符串，输出小写字母
+#### 输入逗号分割的数字，输出被除数。如输入2,4,6,8,10,3,9;输出4,6,8,10,9.
+#### 输入“I am a student.” 实现输出"student. a am I".
+#### 对称的字符串的最大长度
+#### rand5可以随机产生1到5的一个整数，如何用rand5构建rand7，使其能随机产生1到7的一个整数。
+#### 散列表
+
+#### 链表反转
+#### 静态构造函数
+```
+public sealed class Singleton{
+ private Singleton(){}
+ private static Singleton instance = new Singleton();
+ public static Singleton Instance{
+  get{
+   return instance;
+  }
+ }
+}
+```
+这个不太理解，待更新。
