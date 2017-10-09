@@ -1,6 +1,6 @@
 # Java基础
 
-### <a id="public和private和protected和默认">public，private，protected和默认有什么区别？</a>
+### <a id="public,private,protected和默认">public，private，protected和默认有什么区别？</a>
 * private：除了包含该成员的类外，其他类无法访问这个成员；
 * 默认访问权限为包访问权限，意味着当前包中的所有其他类对该成员都有访问权限，但对于其他包这个成员是private；
 * protected为继承访问权限，也提供包访问权限；
