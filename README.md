@@ -34,3 +34,4 @@
 	* [数据库的原子性](https://github.com/BenjaminXi/Java-study-road/blob/master/database.md#原子性)
 	* [如何实现数据库的分页查询](https://github.com/BenjaminXi/Java-study-road/blob/master/database.md#分页查询)
 	* [各种范式有什么区别](https://github.com/BenjaminXi/Java-study-road/blob/master/database.md#范式)
+	* [sql语句练习50题](https://github.com/BenjaminXi/Java-study-road/blob/master/sql%E8%AF%AD%E5%8F%A5%E7%BB%83%E4%B9%A050%E9%A2%98mysql%E7%89%88.md)
