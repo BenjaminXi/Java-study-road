@@ -1,6 +1,6 @@
 # 目录
 * [Java](https://github.com/BenjaminXi/Java-study-road/blob/master/Java.md)
-	* [public，private，protected和默认有什么区别](https://github.com/BenjaminXi/Java-study-road/edit/master/Java.md#public&private&protected&默认)
+	* [public，private，protected和默认有什么区别](https://github.com/BenjaminXi/Java-study-road/edit/master/Java.md#public和private和protected和默认)
 	* [String,StringBuffer,StringBuilder有什么区别](https://github.com/BenjaminXi/Java-study-road/edit/master/Java.md#String&StringBuffer&StringBuilder)
 	* [list和set有什么区别](https://github.com/BenjaminXi/Java-study-road/edit/master/Java.md#list&set)
 	* [什么是类的成员变量，局部变量，实例变量和类变量](https://github.com/BenjaminXi/Java-study-road/edit/master/Java.md#成员变量&局部变量&实例变量&类变量)
