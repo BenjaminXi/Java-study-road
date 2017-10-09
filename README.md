@@ -1,6 +1,4 @@
-# written-examination
-## 校招笔试总结
-## 目录
+# 目录
 * [1.HTTP](#HTTP)
 	* [1.1Cookie](#cookie)
 	* [1.2HTTP请求](#HTTP请求)
