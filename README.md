@@ -1,9 +1,13 @@
 # 目录
-* [1.HTTP](#HTTP)
-	* [1.1Cookie](#cookie)
-	* [1.2HTTP请求](#HTTP请求)
-* [2.JavaScript](#JavaScript)
-* [3.CSS](#CSS)
+* [HTTP](#HTTP)
+	* [Cookie是什么？Cookie的作用](HTTP#cookie)
+	* [HTTP请求全过程](HTTP#HTTP请求)
+	* [HTTP请求头信息](HTTP#HTTP请求头信息)
+	* [get,post,delete,put,option的作用](HTTP#get,post,delete,put,option的作用)
+	* [get和post的区别](HTTP#get和post的区别)
+	* [cookie,sessionStorage,localStorage的区别](HTTP#cookie&sessionStorage&localStorage的区别)
+* [JavaScript](#JavaScript)
+* [CSS](#CSS)
 	* [3.1选择器](#选择器)
 	* [3.2优先级](#优先级)
 
