@@ -1,4 +1,20 @@
 # 目录
+* [数据结构](https://github.com/BenjaminXi/Java-study-road/blob/master/data-structure.md)
+	* [数组和链表什么区别](https://github.com/BenjaminXi/Java-study-road/blob/master/data-structure.md#数组和链表什么区别)
+	* [堆和栈有什么区别和联系](https://github.com/BenjaminXi/Java-study-road/blob/master/data-structure.md#堆和栈有什么区别和联系)
+	* [根据前序遍历和后序遍历求中序遍历](https://github.com/BenjaminXi/Java-study-road/blob/master/data-structure.md#根据前序遍历和后序遍历求中序遍历)
+	* [构建二叉搜索树](https://github.com/BenjaminXi/Java-study-road/blob/master/data-structure.md#构建二叉搜索树)
+		
+* [设计模式](https://github.com/BenjaminXi/Java-study-road/blob/master/design-patterns.md)
+	* [单例模式](https://github.com/BenjaminXi/Java-study-road/blob/master/design-patterns.md#单例模式)
+	
+* [操作系统](https://github.com/BenjaminXi/Java-study-road/blob/master/operating-system.md)
+	* [进程与线程的联系与区别](https://github.com/BenjaminXi/Java-study-road/blob/master/operating-system.md#进程与线程)
+	* [进程间的通信方式](https://github.com/BenjaminXi/Java-study-road/blob/master/operating-system.md#进程间的通信方式程)
+	* [单线程环境](https://github.com/BenjaminXi/Java-study-road/blob/master/operating-system.md#单线程环境)
+	* [多线程环境](https://github.com/BenjaminXi/Java-study-road/blob/master/operating-system.md#多线程环境)
+	* [多线程改进](https://github.com/BenjaminXi/Java-study-road/blob/master/operating-system.md#多线程改进)
+	
 * [Java](https://github.com/BenjaminXi/Java-study-road/blob/master/Java.md)
 	* [public，private，protected和默认有什么区别](https://github.com/BenjaminXi/Java-study-road/blob/master/Java.md#public,private,protected和默认)
 	* [String,StringBuffer,StringBuilder有什么区别](https://github.com/BenjaminXi/Java-study-road/blob/master/Java.md#String&StringBuffer&StringBuilder)
@@ -23,11 +39,7 @@
 	* [选择器的优先级如何计算](https://github.com/BenjaminXi/Java-study-road/blob/master/CSS.md#优先级)
 	* [display:none和visiblity：hidden有什么区别](https://github.com/BenjaminXi/Java-study-road/blob/master/CSS.md#display&visiblity)
 
-* [数据结构](https://github.com/BenjaminXi/Java-study-road/blob/master/data-structure.md)
-	* [数组和链表什么区别](https://github.com/BenjaminXi/Java-study-road/blob/master/data-structure.md#数组和链表什么区别)
-	* [堆和栈有什么区别和联系](https://github.com/BenjaminXi/Java-study-road/blob/master/data-structure.md#堆和栈有什么区别和联系)
-	* [根据前序遍历和后序遍历求中序遍历](https://github.com/BenjaminXi/Java-study-road/blob/master/data-structure.md#根据前序遍历和后序遍历求中序遍历)
-	* [构建二叉搜索树](https://github.com/BenjaminXi/Java-study-road/blob/master/data-structure.md#构建二叉搜索树)
+
 	
 * [数据库](https://github.com/BenjaminXi/Java-study-road/blob/master/database.md)
 	* [什么是事务](https://github.com/BenjaminXi/Java-study-road/blob/master/database.md#事务)
