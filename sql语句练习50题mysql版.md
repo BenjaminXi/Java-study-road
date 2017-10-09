@@ -336,44 +336,55 @@ WHERE SC.Sid=Student.Sid AND SC.Cid=Course.Cid ORDER BY sc.sid;
 ```
 ```
 ## 37.查询不及格的课程，并按课程号从大到小排列 
+```
 SELECT cid,sid FROM sc WHERE score < 60 ORDER BY cid 
-
+```
 ## 38.查询课程编号为且课程成绩在分以上的学生的学号和姓名；
+```
 select student.sid,student.sname from sc,student where sc.cid=1 and sc.score>60 and sc.sid=student.sid
-
+```
 ## 39.求选了课程的学生人数 
 
 ## 40.查询选修“叶平”老师所授课程的学生中，成绩最高的学生姓名及其成绩
+```
 select student.sname,sc.score from sc,student,teacher,course c where teacher.tname='李子'
 and teacher.tid=c.tid and c.cid=sc.cid and sc.sid=student.sid and sc.score=(select max(score)from sc where sc.cid=c.cid)
-
+```
 ## 41.查询各个课程及相应的选修人数
+```
 select sc.cid ,count(sc.sid)from sc,student where sc.sid=student.sid group by sc.cid 
-
+```
 ## 42.查询不同课程成绩相同的学生的学号、课程号、学生成绩
 
 ## 43.查询每门功成绩最好的前两名
 
 ## 44.统计每门课程的学生选修人数（超过人的课程才统计）。要求输出课程号和选修人数，查询结果按人数降序排列，查询结果按人数降序排列，若人数相同，按课程号升序排列
+```
 select sc.cid,count(sc.cid)from sc,course where sc.cid=course.cid group by sc.cid  order by sc.cid desc
-
+```
 ## 45.检索至少选修两门课程的学生学号
+```
 SELECT sid FROM  sc group  by  sid having  count(*)  >  =  2  
-
+```
 rownum的用法
 查询所有成绩第二名到第四名的成绩
+```
 select * from （select rownum p,t.score from（SELECT s.score score FROM sc s ORDER BY score desc）t ）tt where tt.p>1 and tt.p<5
-
+```
 ## 46.查询全部学生都选修的课程的课程号和课程名 
 
 ## 47.查询没学过“叶平”老师讲授的任一门课程的学生姓名
+```
 select distinct sid from sc where sid not in(select sc.sid from sc,course,teacher where sc.cid=course.cid and course.tid=teacher.tid and 
 teacher.tname='杨巍巍')
-
+```
 ## 48.查询两门以上不及格课程的同学的学号及其平均成绩
 
 ## 49.检索“”课程分数小于，按分数降序排列的同学学号
+```
 select sc.sid from sc,course where sc.cid=course.cid and course.cname='java' and sc.score<90
-
+```
 ## 50.删除“”同学的“”课程的成绩
+```
 delete from sc where sid=1 and cid=1
+```
